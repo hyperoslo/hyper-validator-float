@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="test-app">
+  <head>
+    <title>Dummy app</title>
+
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="hyper-validator-base.js"></script>
+    <script type="text/javascript" src="hyper-validator-float.js"></script>
+    <script type="text/javascript">
+      angular.module('test-app', ['hyper-validator-base']);
+    </script>
+
+  </head>
+  <body>
+    <form onsubmit="return false">
+      <input name="input" type="number" ng-model="number" hyper-validate-float />
+      <output name="output" id="model-value">{{number}}</output>
+    </form>
+  </body>
+</html>
